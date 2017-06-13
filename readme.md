@@ -1,3 +1,9 @@
+
+- [API simple pour le developeur](#ap-simple-pour-le-developeur)
+- [Création de plugin simplifié](#création-de-plugin-simplifié)
+- [Moteur de template](#moteur-de-template)
+- [Gestion des images](#gestion-des-images)
+
 # API simple pour le developeur
 
 S'inspirer d'API de type Laravel / Eloquent ORM pour éviter de devoir écrire du code MySQL ou du code PHP inutile. Rendre la récupération de contenu plus simple et beaucoup plus "fun".
@@ -118,8 +124,45 @@ Automatiquement en back-office un nouveau champ est disponible :
 
 Source : [KirbyCMS](https://getkirby.com/docs)
 
+Prévoir aussi la possibilité de pouvoir ajouter par exemple un champs select rempli avec la liste d'un autre plugin. (Ex. _Slider_ qui a une propriété _link_ qui est un select de la lsite des pages)
+
 Tout ces exemples nous montre que la déclaration dans un plugin de champs obligatoires, standards ou spécifiques, devrait se faire en peu de temps, avec peu de connaissances. Dans l'exemple de Kirby, un simple fichier _yaml_ suffit, juste une liste avec des tabulations, syntax parfaitement maîtrisable par un stagiaire ou même par un chef de projet (liste qui est souvent déjà réalisé par celui-ci dans un .doc)
 
 Statamic qui a la même syntax en _yaml_ a aussi une interface de type Podio qui permet depuis le back-office de déclarer ces champs.
 
 Source : [Statamic](https://statamic.com/features)
+
+
+# Moteur de template
+Prévoir _Twig_, moteur de template de Symfony, robuste et qui a fait ses preuves. Encourage la séparation entre code et template.
+
+```twig
+<ul id="navigation">
+  {% for item in navigation %}
+    <li>
+        <a href="{{ item.href }}">{{ item.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+```
+
+Prévoir la possibilité de pouvoir surcharger un template présent dans un plugin par celui du template. (Comme pour WooCommerce ou comme les composants sur Joomla)
+
+Idée : Prévoir qu'automatiquement lors de la création d'un plugin/type des données (Cf chapitre précédent) un template _twig_ reçoit toutes les données déclarées dans la config (_yaml_ ou autre).
+
+Source : [Twig](https://twig.sensiolabs.org/doc/2.x/)
+
+# Gestion des images
+Prévoir une gestion des images plus propre et simple qu'aujourd'hui avec par exemple l'utilisation de l'API Intervention Image. Quid de l'integration avec la lib de WordPress? et sa gestion de thumbnail horrible.
+
+```php
+<?php
+// open an image file
+$img = Image::make('public/foo.jpg');
+// now you are able to resize the instance
+$img->resize(320, 240);
+// finally we save the image as a new file
+$img->save('public/bar.jpg');
+```
+
+[Intervention Image](http://image.intervention.io/)
