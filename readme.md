@@ -132,6 +132,8 @@ Statamic qui a la même syntax en _yaml_ a aussi une interface de type Podio qui
 
 Source : [Statamic](https://statamic.com/features)
 
+Dans le même principe, il existe Piklist  https://wordpress.org/plugins/piklist/ équivalant à ACF mais qui permet de créer en code des PostType, Metabox, des page Settings etc.. il a même + de types de champs possible que Themosis. On peut y réfléchir en dépendance, si on fait genre une classe Plugin propre pour créer facilement des plugins ou générer depuis des yaml de config.
+
 
 # Moteur de template
 Prévoir _Twig_, moteur de template de Symfony, robuste et qui a fait ses preuves. Encourage la séparation entre code et template.
