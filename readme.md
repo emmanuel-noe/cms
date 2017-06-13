@@ -30,6 +30,8 @@ $posts = Post::hasMeta('acf')->get();
 Source : [Librairie Corcel pour WP](https://github.com/corcel/corcel)
 
 ##### Eloquent ORM
+
+Exemple de filtre simple avec cette syntax :
 ```php
 <?php
 $flights = Flight::where('active', 1)
