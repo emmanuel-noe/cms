@@ -146,6 +146,15 @@ On peut y réfléchir en dépendance, pour par exemple une classe Plugin propre 
 
 Source : [Piklist](https://wordpress.org/plugins/piklist/)
 
+##### Papi
+
+Similairement une autre lib qui permet facilement d'ajouter des champs custom pour personnaliser l'UI.
+
+![papi](http://wp-papi.github.io/images/papi/start-page-example-page.png)
+
+Source : [Papi](https://wp-papi.github.io/)
+
+
 
 # Moteur de template
 Prévoir _Twig_, moteur de template de Symfony, robuste et qui a fait ses preuves. Encourage la séparation entre code et template.
