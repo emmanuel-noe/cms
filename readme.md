@@ -63,7 +63,7 @@ $newsItem->addMedia($cheminVersFichier)->toMediaCollection('images');
 
 Source : [Laravel Medialibrary](https://docs.spatie.be/laravel-medialibrary/v5/introduction)
 
-Tous ces exemples sont là pour montrer que le developpement pourrait être beaucoup plus rapide en PHP si l'API est directement pensée pour le developpeur qui va ensuite devoir la manipulé et au temps nécessaire à cette manipulation. On le voit beaucoup de **choses existent** et **rien ne sert de réinventer des solutions à chaques fois**, qui ne sont pas performantes, pas utilisables par un dev ensuite et pas robustes.
+Tous ces exemples sont là pour montrer que le developpement pourrait être beaucoup plus rapide en PHP si l'API est directement pensée pour le developpeur qui va ensuite devoir la manipuler et au temps nécessaire à cette manipulation. On le voit beaucoup de **choses existent** et **rien ne sert de réinventer des solutions à chaques fois**, qui ne sont pas performantes, pas utilisables par un dev ensuite et pas robustes.
 
 
 
